@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button Name="PressDownLetterStartDrag" Content="Press Down Letter" HorizontalAlignment="Left" Margin="47,107,0,0" VerticalAlignment="Top" Height="54" Width="176" PreviewMouseDown="ButtonPressDownStartDrag_MouseDown"/>
+        <Button Name="PressUpLetterStartDrag" Content="Press Up Letter" HorizontalAlignment="Left" Margin="47,185,0,0" VerticalAlignment="Top" Height="54" Width="176" MouseDown="ButtonPressUpStartDrag_MouseDown"/>
+        <Button Name="PressWaitStartDrag" Content="Wait" HorizontalAlignment="Left" Margin="47,265,0,0" VerticalAlignment="Top" Height="54" Width="176" MouseDown="ButtonWaitStartDrag_MouseDown"/>
+        <Rectangle AllowDrop="True" Name="PreliminaryTimeline" HorizontalAlignment="Left" Height="236" Margin="362,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="303" PreviewDragEnter="PreliminaryTimeline_PreviewDragEnter" PreviewDrop="PreliminaryTimeline_DragDrop"/>
+        
 
     </Grid>
 </Window>

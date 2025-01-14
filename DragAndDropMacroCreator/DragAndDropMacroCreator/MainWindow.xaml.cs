@@ -20,5 +20,30 @@ namespace DragAndDropMacroCreator
         {
             InitializeComponent();
         }
+
+        private void ButtonPressDownStartDrag_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragDrop.DoDragDrop((Button)sender, "Something", DragDropEffects.Copy);
+        }
+
+        private void ButtonPressUpStartDrag_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ButtonWaitStartDrag_MouseDown(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PreliminaryTimeline_PreviewDragEnter(object sender, DragEventArgs e)
+        {
+            e.Effects = DragDropEffects.Copy;
+        }
+
+        private void PreliminaryTimeline_DragDrop(object sender, DragEventArgs e)
+        {
+            ((Rectangle)sender).Fill = Brushes.Green;
+        }
     }
 }
